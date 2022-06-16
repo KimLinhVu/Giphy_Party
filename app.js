@@ -12,7 +12,11 @@ var search = null
 function displayResults(gifs){
     gifs.forEach((gif) => {
         results_div.innerHTML += `
-        <img src="${gif.images.original.url}" >
+        <div class="gif-card">
+            <img src="${gif.images.original.url}" alt="${gif.title}">
+            <h3>Title: ${gif.title}</h3>
+            <h3>User: ${gif.username}</h3>
+        </div>
         `
     })
     input.value = ``

@@ -7,3 +7,28 @@
 .hidden {
     display: none;
 }
+
+.results{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: black;
+    color: white;
+}
+
+.gif-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+img{
+    width: 200px;
+    align-self: center;
+}
+
+h3{
+    font-weight: 200;
+    font-size: 1rem;
+    align-self: center;
+}
