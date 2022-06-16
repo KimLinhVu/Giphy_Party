@@ -20,7 +20,9 @@ function displayResults(gifs){
         `
     })
     input.value = ``
-    load_more.classList.remove('hidden')
+    if (gifs.length != 0){
+        load_more.classList.remove('hidden')
+    }
 }
 
 async function fetchGifs(search, offset){
