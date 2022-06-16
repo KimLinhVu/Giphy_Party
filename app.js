@@ -4,9 +4,8 @@ const results_div = document.querySelector('.results')
 const api_key = "55hhPS3sSZDvYFrWRpCHeS8fTutClh8J"
 const load_more = document.getElementById('load-more-btn')
 
-var page = 0
+var page = 1
 var limit = 10
-var offset = 0
 var search = null
 
 
@@ -31,9 +30,10 @@ form.addEventListener('submit', (event) => {
     event.preventDefault()
 
     results_div.innerHTML = ``
+    page = 0
     search = input.value
     console.log(search)
-    fetchGifs(search)
+    fetchGifs(search, (page++)*limit)
 })
 
 function showMore(){
