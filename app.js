@@ -5,11 +5,13 @@ const api_key = "55hhPS3sSZDvYFrWRpCHeS8fTutClh8J"
 
 
 function displayResults(gifs){
+    results_div.innerHTML = ``
     gifs.forEach((gif) => {
         results_div.innerHTML += `
         <img src="${gif.images.original.url}" >
         `
     })
+    input.value = ``
 }
 
 async function fetchGifs(search){
